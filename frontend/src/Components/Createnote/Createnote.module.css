@@ -1,3 +1,6 @@
+body {
+  background-color: #DCE7F7;
+}
 .groupcolor{
   all: unset;
   width: 50px;
@@ -31,6 +34,7 @@
   width: 76.5%;
   height: 15vh;
   text-align: center;
+  margin-top: 10px;
 }
 .writenotes input{
   margin: 10px;
@@ -47,13 +51,29 @@
 .notes{
   background-color: #ffffff;
   margin: 10px;
+  border-radius: 5px;
   overflow: hidden;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .notes span{
   float: right;
-  font-size: small;
+  font-weight: bold;
+  font-size: medium;
 }
 .notesContainer{
   max-height: 540px;
   overflow-y: auto;
+}
+
+@media screen and (max-width:1200px){
+  .writenotes{
+  position: absolute;
+  bottom: 1%;
+  background-color: #001F8B;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  margin-top: 10px;
+}
 }

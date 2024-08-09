@@ -81,7 +81,7 @@ function CreateNotes({ selectedGroup }) {
             {note.content}
             <br />
             <br />
-            <span>{note.date} {note.time}</span>
+            <span>{note.date} &middot; {note.time}</span>
           </div>
         ))}
       </div>

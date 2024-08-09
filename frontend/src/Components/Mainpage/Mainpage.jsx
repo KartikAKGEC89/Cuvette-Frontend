@@ -72,7 +72,7 @@ const Mainpage = () => {
 
   return (
     <div className={styles.page}>
-      <div className={`${styles.left} `}>
+      <div className={`${styles.left} ${selectedGroup ? styles.hidden : styles.visible}`}>
         <h1>Pocket Notes</h1>
         <button onClick={handleClick}>+</button>
         {showComponent && (
@@ -91,7 +91,7 @@ const Mainpage = () => {
           })}
         </div>
       </div>
-      <div className={`${styles.right} `}>
+      <div className={`${styles.right} ${selectedGroup ? styles.visible : styles.hidden}`}>
         {selectedGroup && <CreateNotes selectedGroup={selectedGroup}/>}
         {!selectedGroup && (
           <>
