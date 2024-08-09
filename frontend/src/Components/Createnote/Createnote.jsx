@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Createnote.module.css';
 import vector from '../../Assets/Vector.png';
+import backarrow from '../../Assets/Back.png';
 import axios from 'axios';
 
-function CreateNotes({ selectedGroup }) {
+function CreateNotes({ selectedGroup, setSelectedGroup }) {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState('');
   const notesContainerRef = useRef(null);
@@ -66,10 +67,15 @@ function CreateNotes({ selectedGroup }) {
   };
   const selectedGroupNotes = notes.filter(note => note.groupId === selectedGroup._id);
 
+  const handleSelect = () => {
+    setSelectedGroup(null);
+  };
+
   
   return (
     <div>
       <div className={styles.header}>
+        <img className={ styles.arrow } src={backarrow} alt='back' onClick={handleSelect}/>
         <button className={styles.groupcolor} style={{ backgroundColor: selectedGroup?.color }}>
           {selectedGroup?.name.slice(0, 2)}
         </button>

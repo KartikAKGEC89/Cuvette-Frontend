@@ -92,7 +92,7 @@ const Mainpage = () => {
         </div>
       </div>
       <div className={`${styles.right} ${selectedGroup ? styles.visible : styles.hidden}`}>
-        {selectedGroup && <CreateNotes selectedGroup={selectedGroup}/>}
+        {selectedGroup && <CreateNotes selectedGroup={selectedGroup} setSelectedGroup={setSelectedGroup} />}
         {!selectedGroup && (
           <>
             <img className={styles.bg} src={bg} alt="bgimage" />
