@@ -6,6 +6,7 @@ import CreateNotes from '../Createnote/Createnote';
 import bg from '../../Assets/MainImage.png';
 import lock from '../../Assets/Lock.png';
 import axios from 'axios';
+import startTour from '../../Driver';
 
 const Mainpage = () => {
   const [showComponent,setShowComponent]=useState(false);
@@ -70,6 +71,10 @@ const Mainpage = () => {
     setShowComponent(!showComponent);
   }
 
+  useEffect(() => {
+    startTour();
+  }, []);
+
   return (
     <div className={styles.page}>
       <div className={`${styles.left} ${selectedGroup ? styles.hidden : styles.visible}`}>
@@ -80,7 +85,7 @@ const Mainpage = () => {
             <CreateGroup onSave={handleSaveGroup}/>
           </div>
         )}
-        <div className={styles.groupscontainer} ref={groupsConatinerRef}>
+        <div id='groupList' className={styles.groupscontainer} ref={groupsConatinerRef}>
           {groups.map((group,index)=>{
             return (
               <div key={index} onClick={()=>{handleGroupClick(group)}}>
@@ -94,7 +99,7 @@ const Mainpage = () => {
       <div className={`${styles.right} ${selectedGroup ? styles.visible : styles.hidden}`}>
         {selectedGroup && <CreateNotes selectedGroup={selectedGroup} setSelectedGroup={setSelectedGroup} />}
         {!selectedGroup && (
-          <>
+          <div id='backgroundImage' >
             <img className={styles.bg} src={bg} alt="bgimage" />
             <div className={styles.bgcontent}>
               <h1>Pocket Notes</h1>
@@ -105,7 +110,7 @@ const Mainpage = () => {
               <h5>end-to-end encrypted</h5>
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
