@@ -1,10 +1,11 @@
 import React from 'react'
+import Mainpage from './Components/Mainpage/Mainpage'
 
 const App = () => {
   return (
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Mainpage />
+    </>
   )
 }
 
