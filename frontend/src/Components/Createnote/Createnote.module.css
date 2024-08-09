@@ -1,0 +1,59 @@
+.groupcolor{
+  all: unset;
+  width: 50px;
+  height: 50px;
+  background-color: #16008B;
+  border-radius: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 15px 30px;
+  
+}
+
+.heading{
+  all: unset;
+  font-family: 'Roboto',sans-serif;
+  font-size: 1.5rem;
+  margin: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+}
+.header{
+  background-color: #001F8B;
+}
+.writenotes{
+  position: absolute;
+  bottom: 1%;
+  background-color: #001F8B;
+  width: 76.5%;
+  height: 15vh;
+  text-align: center;
+}
+.writenotes input{
+  margin: 10px;
+  width: 95%;
+  height:12vh;
+  font-size: 20px;
+}
+.vector{
+  position: absolute;
+  right: 4%;
+  bottom: 40%;
+  height: 20px;
+}
+.notes{
+  background-color: #ffffff;
+  margin: 10px;
+  overflow: hidden;
+}
+.notes span{
+  float: right;
+  font-size: small;
+}
+.notesContainer{
+  max-height: 540px;
+  overflow-y: auto;
+}
