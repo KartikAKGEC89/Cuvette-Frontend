@@ -11,7 +11,7 @@ function CreateNotes({ selectedGroup }) {
   useEffect(() => {
      const fetchNotes = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/notes/all${selectedGroup._id}`);
+        const response = await axios.get(`https://cuvette-backend-m2dm.onrender.com/notes/all/${selectedGroup._id}`);
         setNotes(response.data);
       } catch (error) {
         console.error('Error fetching notes:', error);
@@ -31,7 +31,7 @@ function CreateNotes({ selectedGroup }) {
 
   const handleSaveNote = async (Note) => {
     try {
-      const response = await axios.post("http://localhost:8080/notes/create", Note);
+      const response = await axios.post("https://cuvette-backend-m2dm.onrender.com/notes/create", Note);
       console.log(response.data);
       const newNote = response.data.note;
       setNotes(prevNotes => [...prevNotes, newNote]);

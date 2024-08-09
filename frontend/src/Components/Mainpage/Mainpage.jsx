@@ -17,7 +17,7 @@ const Mainpage = () => {
   useEffect(()=>{
     const fetchGroups = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/groups/all");
+        const response = await axios.get("https://cuvette-backend-m2dm.onrender.com/groups/all");
         setGroups(response.data);
       } catch (error) {
         console.error('Error fetching groups:', error);
@@ -50,7 +50,7 @@ const Mainpage = () => {
   const handleSaveGroup= async (groupData)=>{
     
     try {
-      const response = await axios.post("http://localhost:8080/groups/create", groupData);
+      const response = await axios.post("https://cuvette-backend-m2dm.onrender.com/groups/create", groupData);
       const newGroup = response.data.group;
       setGroups(prevGroups => [...prevGroups, newGroup]);
     } catch (error) {
