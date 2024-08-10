@@ -79,9 +79,17 @@ body {
   font-weight: bold;
   font-size: medium;
 }
-.notesContainer{
-  max-height: 540px;
-  overflow-y: auto;
+.notesContainer {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; 
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.noNotes {
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media screen and (max-width:1200px){
