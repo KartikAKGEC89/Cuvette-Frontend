@@ -26,11 +26,6 @@ body {
   border-radius: 4px;
 }
 
-.noNotes {
-  font-size: large;
-  font-weight: bold;
-}
-
 .heading{
   all: unset;
   font-family: 'Roboto',sans-serif;
